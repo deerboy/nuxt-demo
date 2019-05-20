@@ -1,67 +1,37 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        dog
-      </h1>
-      <h2 class="subtitle">
-        My sweet Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
-      </div>
+  <div>
+    <div class="hero">
+      <p class="hero__title">はじめてのNuxtサイト</p>
+      <p class="hero__description">Nuxtを覚えよう</p>
+      <p class="hero__btn">
+        <a href="" class="btn btn--white">リンク</a>
+      </p>
     </div>
-  </section>
+  </div>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style lang="scss" scoped>
+.hero {
+  height: 600px;
+  padding: 0 24px;
   display: flex;
+  flex-flow: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  background: #000;
+  color: #ffffff;
+  background: center/cover url('/hero.jpg');
+  &__title {
+    margin-bottom: 16px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  @include sp {
+    height: 400px;
+  }
 }
 </style>
